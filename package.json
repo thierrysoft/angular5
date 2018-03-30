@@ -9,9 +9,16 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+
+    "precommit": "npm run lint",
+    "build-prod": "ng build --prod",
+    "test-ci": "ng test --single-run --code-coverage --reporters=teamcity"
+  },
+
     "precommit": "npm run lint"
     "e2e": "ng e2e"
 },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
@@ -24,6 +31,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "johnny-five": "^0.14.2",
     "rxjs": "^5.5.6",
     "yarn": "^1.5.1",
     "zone.js": "^0.8.19"
